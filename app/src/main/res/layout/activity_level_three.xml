@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layerLvl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <Button
+        android:id="@+id/backToHome2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back to Home"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865" />
+
+    <TextView
+        android:id="@+id/scoreDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/greenBtn_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="115dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:tag="1"
+        app:backgroundTint="#0077FC96"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/yellowBtn_one"
+        app:strokeColor="#77FC96"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/yellowBtn_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="10dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:tag="4"
+        app:backgroundTint="#00FEDD9D"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/greenBtn_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:strokeColor="#FEDD9D"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/redBtn_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="10dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:tag="3"
+        app:backgroundTint="#00FCC3B9"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/purpleBtn_one"
+        app:layout_constraintEnd_toStartOf="@+id/orangeBtn_one"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#FCC3B9"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/purpleBtn_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="185dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:tag="3"
+        app:backgroundTint="#00FCC3B9"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/blueBtn_one"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/redBtn_one"
+        app:strokeColor="#F5AAFD"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/blueBtn_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="185dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:tag="2"
+        app:backgroundTint="#00AAD5FF"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/purpleBtn_one"
+        app:layout_constraintTop_toBottomOf="@+id/orangeBtn_one"
+        app:strokeColor="#AAD5FF"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/orangeBtn_one"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="185dp"
+        android:layout_marginBottom="10dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:tag="2"
+        app:backgroundTint="#00AAD5FF"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/blueBtn_one"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/redBtn_one"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#FF8585"
+        app:strokeWidth="6dp" />
+
+    <TextView
+        android:id="@+id/gameOver2"
+        android:layout_width="218dp"
+        android:layout_height="300dp"
+        android:background="#CB000000"
+        android:elevation="10dp"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:text="Under Construction"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/backToHome2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.966" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

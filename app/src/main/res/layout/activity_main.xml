@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black">
+
+    <TextView
+        android:id="@+id/SubTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Memory Game"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/redBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@color/red"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/yellowBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/red"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/blueBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@color/blue"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/greenBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/blue"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/greenBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@color/green"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/blueBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/yellowBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/green"
+        app:strokeWidth="6dp" />
+
+    <Button
+        android:id="@+id/yellowBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:backgroundTint="@color/yellow"
+        app:cornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/greenBtn"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/redBtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/yellow"
+        app:strokeWidth="6dp" />
+    <!--dari sini -->
+    <Button
+        android:id="@+id/StartButton"
+        android:layout_width="185dp"
+        android:layout_height="65dp"
+        android:layout_centerHorizontal="true"
+        android:text="Start Game"
+        android:textSize="18sp"
+        app:backgroundTint="#007C6F6F"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SubTitle"
+        app:layout_constraintVertical_bias="0.716" />
+
+    <Button
+        android:id="@+id/HTPButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How To Play"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.848"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901" />
+
+    <Button
+        android:id="@+id/LevelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Level Selection"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901" />
+    <!-- sampe sini -->
+</androidx.constraintlayout.widget.ConstraintLayout>
