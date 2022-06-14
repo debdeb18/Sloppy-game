@@ -103,9 +103,7 @@ public class level_two extends AppCompatActivity {
                         dotmatrix.isPLaying();
                         final String str1 = "Level 1 - cake";
                         final String str2 = "uh oh.. you're ded";
-                        textLcdJNI.clear();
-                        textLcdJNI.print1Line(str1);
-                        textLcdJNI.print2Line(str2);
+                        textLcdJNI.printTextLcd(str1, str2);
                     }
                 };
                 runOnUiThread(() -> {
@@ -123,9 +121,7 @@ public class level_two extends AppCompatActivity {
                         public void run() {
                             final String str1 = "Level 1 - cake";
                             final String str2 = "Level Completed!! Congratulations";
-                            textLcdJNI.clear();
-                            textLcdJNI.print1Line(str1);
-                            textLcdJNI.print2Line(str2);
+                            textLcdJNI.printTextLcd(str1, str2);
                             fullcolorledsJNI.run(play.currentLives);
                             dotmatrix.off();
                         }

@@ -38,20 +38,8 @@ public class SloppyActivity extends AppCompatActivity {
 
         //to add info to db
         //dbHandler.addNewCourse(playerName, highestlvl, lvlTime, lvlDescription);
-
-        int threelive = 7;
-
-        // native method
-        ledJNI = new LedJNI();
-        ledData = (char)threelive; //2 lives
-        ledJNI.on(ledData);
-
-        final String str1 = "Sloppy - Home";
-        final String str2 = "a game memory";
-        textLcdJNI.clear();
-        textLcdJNI.print1Line(str1);
-        textLcdJNI.print2Line(str2);
-
+        turnLedOn();
+        printHome();
         dotmatrix.isHome();
 
         //button to move to subactivity
@@ -64,16 +52,16 @@ public class SloppyActivity extends AppCompatActivity {
         button_LS.setOnClickListener(v -> openSubActivity_LS());
     }
 
-    @Override
-    public void onStart() {
+    private void turnLedOn() {
         ledJNI = new LedJNI();
         ledData = (char)0;
         ledJNI.on(ledData);
-        final String str1 = "Sloppy - Home";
-        final String str2 = "a game memory";
-        textLcdJNI.clear();
-        textLcdJNI.print2Line(str1);
-        textLcdJNI.print2Line(str2);
+    }
+
+    @Override
+    public void onStart() {
+        turnLedOn();
+        printHome();
         dotmatrix.isHome();
         super.onStart();
     }
@@ -96,13 +84,15 @@ public class SloppyActivity extends AppCompatActivity {
     protected void onResume() {
         textLcdJNI.initialize();
         ledJNI.init();
-        final String str1 = "Sloppy - Home";
-        final String str2 = "a game memory";
-        textLcdJNI.clear();
-        textLcdJNI.print1Line(str1);
-        textLcdJNI.print2Line(str2);
+        printHome();
         dotmatrix.isHome();
         super.onResume();
+    }
+
+    private void printHome() {
+        final String str1 = "Sloppy - Home";
+        final String str2 = "a game memory";
+        textLcdJNI.printTextLcd(str1, str2);
     }
 
     @Override

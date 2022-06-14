@@ -98,9 +98,7 @@ public class LevelOne extends AppCompatActivity {
                 dotmatrix.off();
                 final String str1 = "Level 1 - cake";
                 final String str2 = "uh oh.. you're ded";
-                textLcdJNI.clear();
-                textLcdJNI.print1Line(str1);
-                textLcdJNI.print2Line(str2);
+                textLcdJNI.printTextLcd(str1, str2);
                 runOnUiThread(() -> {
                     gameOver.setVisibility(View.VISIBLE);
                     tryAgain.setVisibility(View.VISIBLE);
@@ -119,9 +117,7 @@ public class LevelOne extends AppCompatActivity {
                         public void run() {
                             final String str1 = "Level 1 - cake";
                             final String str2 = "Level Completed!! Congratulations";
-                            textLcdJNI.clear();
-                            textLcdJNI.print1Line(str1);
-                            textLcdJNI.print2Line(str2);
+                            textLcdJNI.printTextLcd(str1, str2);
                             dotmatrix.off();
                         }
                     };

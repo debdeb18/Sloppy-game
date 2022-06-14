@@ -21,15 +21,10 @@ public class LevelSelect2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_select2);
 
-        ledJNI = new LedJNI();
-        ledData = (char)255;
-        ledJNI.on(ledData);
-
+        turnLedOn();
         final String str1 = "Sloppy";
         final String str2 = "choose a level";
-        textLcdJNI.clear();
-        textLcdJNI.print1Line(str1);
-        textLcdJNI.print2Line(str2);
+        textLcdJNI.printTextLcd(str1, str2);
 
         dotmatrix.isLevelSelect();
 
@@ -45,6 +40,13 @@ public class LevelSelect2 extends AppCompatActivity {
         Button button3 = findViewById(R.id.Level3Button);
         button3.setOnClickListener(v -> openLevelThree());
     }
+
+    private void turnLedOn() {
+        ledJNI = new LedJNI();
+        ledData = (char)255;
+        ledJNI.on(ledData);
+    }
+
     private void openSloppyActivity() { // ini buat ke screen main menu
         Intent intent_SA = new Intent(this, SloppyActivity.class);
         startActivity(intent_SA);
@@ -70,16 +72,10 @@ public class LevelSelect2 extends AppCompatActivity {
     protected void onResume() {
         textLcdJNI.initialize();
         ledJNI.init();
-
-        ledJNI = new LedJNI();
-        ledData = (char)255;
-        ledJNI.on(ledData);
-
+        turnLedOn();
         final String str1 = "Sloppy - Level";
         final String str2 = "choose a level";
-        textLcdJNI.clear();
-        textLcdJNI.print1Line(str1);
-        textLcdJNI.print2Line(str2);
+        textLcdJNI.printTextLcd(str1, str2);
 
         dotmatrix.isLevelSelect();
         super.onResume();
@@ -95,15 +91,10 @@ public class LevelSelect2 extends AppCompatActivity {
 
     @Override
     public void onStart() {
-        ledJNI = new LedJNI();
-        ledData = (char)255;
-        ledJNI.on(ledData);
-
+        turnLedOn();
         final String str1 = "Sloppy - Level";
         final String str2 = "choose a level";
-        textLcdJNI.clear();
-        textLcdJNI.print1Line(str1);
-        textLcdJNI.print2Line(str2);
+        textLcdJNI.printTextLcd(str1, str2);
 
         dotmatrix.isLevelSelect();
         super.onStart();

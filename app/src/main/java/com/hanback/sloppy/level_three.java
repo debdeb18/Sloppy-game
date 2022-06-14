@@ -40,15 +40,12 @@ public class level_three extends AppCompatActivity {
     protected void onResume() {
         textLcdJNI.initialize();
         ledJNI.init();
-
         ledJNI = new LedJNI();
         ledJNI.on((char)255);
 
         final String str1 = "Level 3 - slice";
         final String str2 = "under construction";
-        textLcdJNI.clear();
-        textLcdJNI.print1Line(str1);
-        textLcdJNI.print2Line(str2);
+        textLcdJNI.printTextLcd(str1, str2);
         super.onResume();
     }
 
@@ -61,9 +58,7 @@ public class level_three extends AppCompatActivity {
 
         final String str1 = "Level 3 - slice";
         final String str2 = "under construction";
-        textLcdJNI.clear();
-        textLcdJNI.print1Line(str1);
-        textLcdJNI.print2Line(str2);
+        textLcdJNI.printTextLcd(str1, str2);
         super.onStart();
     }
 

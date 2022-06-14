@@ -19,7 +19,6 @@ public class FullcolorledJNI {
     }
 
     class BackThread extends Thread{
-
         int l;
 
         public void setL(int l) {
