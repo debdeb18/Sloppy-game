@@ -1,4 +1,6 @@
-# Sloppy game for embedded hardware by Hanback
+# Sloppy game using Android Studio and embedded hardware
+
+> Sloppy is a memory game, inspired by the existing Simon game, which is made to better suited a mobile games
 
 This repository contains our final code for this project, with purpose of storing for future references
 
