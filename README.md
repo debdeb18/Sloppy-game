@@ -1,4 +1,4 @@
-# Sloppy - android game for embedded hardware by Hanback
+# Sloppy game for embedded hardware by Hanback
 
 This repository contains our final code for this project, with purpose of storing for future references
 
