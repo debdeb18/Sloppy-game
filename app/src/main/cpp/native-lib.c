@@ -158,13 +158,9 @@ Java_com_hanback_jni_FullcolorledJNI_FLEDControl(JNIEnv* env, jobject thiz, jint
     char buf[3];
 
     fd = open("/dev/fpga_fullcolorled", O_WRONLY);
-    if (fd < 0)
-    {
-        exit(-1);
-    }
+    if (fd < 0) { exit(-1); }
     ret = (int)led_num;
-    switch(ret)
-    {
+    switch(ret) {
         case FULL_LED1:
             ioctl(fd,FULL_LED1);
             break;
@@ -179,13 +175,11 @@ Java_com_hanback_jni_FullcolorledJNI_FLEDControl(JNIEnv* env, jobject thiz, jint
             break;
         case ALL_LED:
             ioctl(fd,ALL_LED);
-            break;
-    }
+            break; }
     buf[0] = val1;
     buf[1] = val2;
     buf[2] = val3;
 
     write(fd,buf,3);
-
     close(fd);
 }
