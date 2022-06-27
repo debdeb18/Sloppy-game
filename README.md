@@ -5,8 +5,8 @@
 This repository contains our final code for this project, with purpose of storing for future references
 
 There are one written document and a demo along with this project:
-1. Report
-2. Video demo
+1. [Report](https://drive.google.com/file/d/1tV8dLkN7VBm3DFpGPSJYosVVXpmIOQaX/view?usp=sharing)
+2. [Presentation and Video demo](https://drive.google.com/file/d/1rFU-gTBibFi1BdFiuhHLerztxxn5ouGx/view)
 
 ## Environtment setup
 software and hardware:
@@ -20,13 +20,9 @@ make sure to have
 npm and git installed
 ```
 
-## How to run
-//coming soon apk file
-
 ## Description Detail
 
 file structure and relation could be seen from `/app/src/main/AndroidManifest.xml` file 
-or `ProjectStructure.file` for more user-friendly version
 
 There are a total of 6 main activity (3 of them are per levels layout):
 |Function|Java file|xml file|
